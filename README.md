@@ -3,16 +3,15 @@
 ## Overview
 
 This project analyzes the Brazilian Olist e-commerce dataset from kaggle using
-**MySQL**.This project demonstrates how SQL can be used to transform raw
-e-commerce data into business-oriented insights. 
-The analysis focuses on customer spending, revenue trends,
-product-category performance, product rankings, and customer
-segmentation.
+**MySQL**.It demonstrates how SQL can be used to transform raw
+e-commerce data into an actionable insights. 
+The analysis focuses on customer spending and segmentation, revenue trends,
+and product performance and rankings.
 
 The SQL analysis was performed in MySQL Workbench and uses joins,
 aggregations, Common Table Expressions (CTEs), window functions,
 `CASE WHEN`, date functions, and other SQL techniques to answer
-business-oriented questions.
+business questions.
 
 ## Business Questions
 
@@ -31,16 +30,16 @@ business-oriented questions.
 ### 1. Top Customers by Total Spending
 
 The analysis identified the top 10 customers based on their total
-payment value. The highest displayed customer total was **7,274.88**,
-followed by other high-value customers with totals above **6,900**.
+payment value. The highest displayed customer total was **13,664.08**,
+followed by another high value customer at **7274.88**.
 
-This analysis combines customer, order, and payment data and counts
-distinct orders for each customer.
+This analysis used join function to combine 3 tables to obtain the total
+money spent by each unique customer id.
 
 ### 2. Monthly Revenue Trend
 
-Monthly revenue increased substantially over the period shown in the
-analysis.
+Monthly revenue dramatically increased from September 2016 to November 2017 on 
+a monthly basis with a slight decline in December 2017
 
 Some notable monthly revenue values were:
 
@@ -67,8 +66,7 @@ The analysis used the `LAG()` window function to compare each month's
 revenue with the previous month.
 
 The displayed results show very large percentage changes during the
-early months because the dataset begins with relatively small revenue
-values. For example:
+early months.
 
 -   October 2016 showed a very large increase compared with September
     2016.
@@ -122,9 +120,9 @@ Customers were classified according to their number of distinct orders:
 -   **One-time buyer** --- 1 order
 -   **Repeat buyer** --- more than 1 order
 
-The displayed query result showed **99,441 one-time buyers**. The
-provided result screenshot does not display a separate repeat-buyer row,
-so no additional repeat-buyer count is inferred from the source.
+The displayed query result showed **93,099 one-time buyers** accounting 
+for 96.88% of the total customer while the rest are repeat buyers.
+
 
 ### 8. Revenue Contribution of the Top Category
 
@@ -146,14 +144,14 @@ Based on the analysis, the following business actions can be considered:
     category revenue in the analysis.
 
 2.  **Monitor monthly revenue patterns**\
-    The substantial changes in monthly revenue suggest that revenue
+    The changes in monthly revenue suggest that revenue
     should be tracked over time to identify periods of growth and
     decline.
 
 3.  **Investigate high-value customers**\
     The top-customer analysis can be used to identify customers
-    contributing substantial revenue and to support targeted retention
-    initiatives.
+    contributing revenue and to support targeted retention
+    rates.
 
 4.  **Use customer spend tiers for segmentation**\
     The Low, Medium, and High Value segments can be used to organize

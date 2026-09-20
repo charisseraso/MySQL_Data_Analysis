@@ -2,8 +2,10 @@
 
 ## Overview
 
-This project analyzes the Brazilian Olist e-commerce dataset using
-**MySQL**. The analysis focuses on customer spending, revenue trends,
+This project analyzes the Brazilian Olist e-commerce dataset from kaggle using
+**MySQL**.This project demonstrates how SQL can be used to transform raw
+e-commerce data into business-oriented insights. 
+The analysis focuses on customer spending, revenue trends,
 product-category performance, product rankings, and customer
 segmentation.
 
@@ -196,17 +198,14 @@ Based on the analysis, the following business actions can be considered:
 
 ## Files
 
--   `README.md` --- Project overview, business questions, findings,
-    recommendations, and technical skills
--   SQL analysis file --- Contains the MySQL queries used to answer the
-    business questions
--   `Olist Capstone.docx` --- Supporting document containing screenshots
-    of the SQL queries and their results
+-   `README.md`
+-   `q1_top10_customer.sql`
+-   `q2_monthly_revenue_trend.sql`
+-   `q3_MoM_revenue.sql`
+-   `q4_top_category.sql`
+-   `q5_top3_products_by_category.sql`
+-   `q6_customer_segmentation_spendingLvL.sql`
+-   `q7_customer_segmentation_purchasefrequency.sql`
+-   `q8_topcategory_percent_revenue.sql`
 
-## Project Focus
 
-This project demonstrates how SQL can be used to transform raw
-e-commerce data into business-oriented insights. The analysis moves from
-basic aggregation to more advanced techniques such as CTEs, window
-functions, customer segmentation, and time-series revenue analysis.
-"# MySQL_Data_Analysis" 
